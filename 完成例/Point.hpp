@@ -45,22 +45,18 @@ namespace mini
 		/// @brief 成分を設定します。
 		/// @param _x 新しい X 成分
 		/// @param _y 新しい Y 成分
-		/// @return *this
-		constexpr Point& set(int _x, int _y) noexcept
+		constexpr void set(int _x, int _y) noexcept
 		{
 			x = _x;
 			y = _y;
-			return *this;
 		}
 
 		/// @brief 成分を設定します。
 		/// @param other 新しい成分
-		/// @return *this
-		constexpr Point& set(const Point& other) noexcept
+		constexpr void set(const Point& other) noexcept
 		{
 			x = other.x;
 			y = other.y;
-			return *this;
 		}
 
 		/// @brief 原点からのマンハッタン距離を返します。
