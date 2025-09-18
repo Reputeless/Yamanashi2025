@@ -2,6 +2,7 @@
 #include <cstdint>	// std::int64_t
 #include <cmath>	// std::sqrt
 #include <format>	// std::formatter
+#include <concepts>	// std::floating_point
 #include <iostream>	// std::ostream, std::istream
 
 namespace mini
