@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include <cstdint> // std::uint16_t, std::uint32_t
+#include <cstdint> // std::uint16_t, std::uint32_t, std::int32_t
 
 namespace mini
 {
