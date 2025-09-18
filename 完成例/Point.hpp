@@ -1,8 +1,8 @@
 ﻿#pragma once
-#include <cmath>	// std::sqrt
 #include <cstdint>	// std::int64_t
-#include <iostream>	// std::ostream, std::istream
+#include <cmath>	// std::sqrt
 #include <format>	// std::formatter
+#include <iostream>	// std::ostream, std::istream
 
 namespace mini
 {
