@@ -130,7 +130,7 @@
     <ClCompile Include="BinaryFileReader.cpp" />
     <ClCompile Include="BinaryFileWriter.cpp" />
     <ClCompile Include="Image.cpp" />
-    <ClCompile Include="mini.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryFileReader.hpp" />
