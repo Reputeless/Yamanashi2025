@@ -5,7 +5,7 @@ namespace mini
 {
 #pragma pack(push, 2)  // 2 バイトアライメントに変更
 
-	/// @brief BMP ファイルのヘッダー情報を表すクラス
+	/// @brief BMP ファイルのヘッダーを表すクラス
 	struct BMPHeader
 	{
 		std::uint16_t bfType = 0x4D42;	// B と M の 2 バイト
