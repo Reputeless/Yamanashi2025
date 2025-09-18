@@ -3,7 +3,6 @@
 #include <cassert>		// assert
 #include <algorithm>	// std::fill
 #include <span>			// std::span
-#include <ranges>		// std::views
 #include "Color.hpp"	// mini::Color
 #include "Point.hpp"	// mini::Point
 
