@@ -70,16 +70,6 @@ namespace mini
 			return (x_ + y_);
 		}
 
-		/// @brief 原点からの距離を返します。
-		/// @tparam Type 距離の型
-		/// @return 原点からの距離
-		template <std::floating_point Type = double>
-		[[nodiscard]]
-		Type length() const noexcept
-		{
-			return std::sqrt(lengthSq<Type>());
-		}
-
 		/// @brief 原点からの距離の 2 乗を返します。
 		/// @tparam Type 距離の型
 		/// @return 原点からの距離の 2 乗
@@ -90,6 +80,16 @@ namespace mini
 			const Type x_ = static_cast<Type>(x);
 			const Type y_ = static_cast<Type>(y);
 			return ((x_ * x_) + (y_ * y_));
+		}
+
+		/// @brief 原点からの距離を返します。
+		/// @tparam Type 距離の型
+		/// @return 原点からの距離
+		template <std::floating_point Type = double>
+		[[nodiscard]]
+		Type length() const noexcept
+		{
+			return std::sqrt(lengthSq<Type>());
 		}
 
 		/// @brief 指定した点からの距離を返します。
