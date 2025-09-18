@@ -149,6 +149,38 @@ namespace mini
 		}
 
 		[[nodiscard]]
+		constexpr Point& operator +=(const Point& other) noexcept
+		{
+			x += other.x;
+			y += other.y;
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Point& operator -=(const Point& other) noexcept
+		{
+			x -= other.x;
+			y -= other.y;
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Point& operator *=(int s) noexcept
+		{
+			x *= s;
+			y *= s;
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Point& operator /=(int s) noexcept
+		{
+			x /= s;
+			y /= s;
+			return *this;
+		}
+
+		[[nodiscard]]
 		friend constexpr bool operator ==(const Point& lhs, const Point& rhs) noexcept = default;
 
 		/// @brief { 0, 0 } を返します。

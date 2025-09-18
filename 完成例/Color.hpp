@@ -51,6 +51,24 @@ namespace mini
 		}
 
 		[[nodiscard]]
+		constexpr Color operator *(double s) const noexcept
+		{
+			return{ (r * s), (g * s), (b * s) };
+		}
+
+		[[nodiscard]]
+		friend constexpr Color operator *(double s, const Color& other) noexcept
+		{
+			return{ (s * other.r), (s * other.g), (s * other.b) };
+		}
+
+		[[nodiscard]]
+		constexpr Color operator /(double s) const noexcept
+		{
+			return{ (r / s), (g / s), (b / s) };
+		}
+
+		[[nodiscard]]
 		constexpr Color& operator +=(const Color& other) noexcept
 		{
 			r += other.r;
@@ -65,6 +83,24 @@ namespace mini
 			r -= other.r;
 			g -= other.g;
 			b -= other.b;
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Color& operator *=(double s) noexcept
+		{
+			r *= s;
+			g *= s;
+			b *= s;
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Color& operator /=(double s) noexcept
+		{
+			r /= s;
+			g /= s;
+			b /= s;
 			return *this;
 		}
 
