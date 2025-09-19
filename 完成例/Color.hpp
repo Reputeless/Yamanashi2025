@@ -40,6 +40,18 @@ namespace mini
 			, b{ rgb } {}
 
 		[[nodiscard]]
+		constexpr Color operator +() const noexcept
+		{
+			return *this;
+		}
+
+		[[nodiscard]]
+		constexpr Color operator -() const noexcept
+		{
+			return{ -r, -g, -b };
+		}
+
+		[[nodiscard]]
 		constexpr Color operator +(const Color& other) const noexcept
 		{
 			return{ (r + other.r), (g + other.g), (b + other.b) };
