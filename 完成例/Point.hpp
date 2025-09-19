@@ -1,9 +1,10 @@
 ﻿#pragma once
-#include <cstdint>	// std::int64_t
-#include <concepts>	// std::floating_point
-#include <cmath>	// std::sqrt
-#include <format>	// std::formatter
-#include <iostream>	// std::ostream, std::istream
+#include <cstdint>		// std::int64_t
+#include <concepts>		// std::floating_point
+#include <cmath>		// std::sqrt
+#include <format>		// std::formatter
+#include <string_view>	// std::string_view
+#include <iostream>		// std::ostream, std::istream
 
 namespace mini
 {
