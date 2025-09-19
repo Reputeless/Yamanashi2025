@@ -35,6 +35,8 @@ namespace mini
 			m_pixels.resize((width * height), fillColor);
 		}
 
+		/// @brief BMP ファイルから読み込んで画像を作成します。
+		/// @param fileName ファイル名
 		[[nodiscard]]
 		explicit Image(std::string_view fileName);
 
@@ -254,6 +256,9 @@ namespace mini
 			return std::span<const Color>{ &m_pixels[y * m_width], static_cast<std::size_t>(m_width) };
 		}
 
+		/// @brief BMP 形式で画像を保存します。
+		/// @param fileName 保存先のファイル名
+		/// @return 保存に成功した場合 true, それ以外の場合は false
 		bool save(std::string_view fileName) const;
 
 	private:
