@@ -113,6 +113,11 @@ namespace mini
 			return ((0 <= y) && (y < m_height) && (0 <= x) && (x < m_width));
 		}
 
+		/// @brief BMP 形式で画像を保存します。
+		/// @param fileName 保存先のファイル名
+		/// @return 保存に成功した場合 true, それ以外の場合は false
+		bool save(std::string_view fileName) const;
+
 		/// @brief 指定した位置のピクセルの色を返します。範囲外の場合は黒を返します。
 		/// @param y 行番号
 		/// @param x 列番号
@@ -255,11 +260,6 @@ namespace mini
 			assert((0 <= y) && (y < m_height));
 			return std::span<const Color>{ &m_pixels[y * m_width], static_cast<std::size_t>(m_width) };
 		}
-
-		/// @brief BMP 形式で画像を保存します。
-		/// @param fileName 保存先のファイル名
-		/// @return 保存に成功した場合 true, それ以外の場合は false
-		bool save(std::string_view fileName) const;
 
 	private:
 
