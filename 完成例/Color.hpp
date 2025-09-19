@@ -1,6 +1,7 @@
 ﻿#pragma once
-#include <iostream>	// std::ostream, std::istream
-#include <format>	// std::formatter
+#include <iostream>		// std::ostream, std::istream
+#include <format>		// std::formatter
+#include <string_view>	// std::string_view
 
 namespace mini
 {
