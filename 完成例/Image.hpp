@@ -8,7 +8,7 @@
 
 namespace mini
 {
-	/// @brief 画像（Color の二次元配列）を表現するクラス
+	/// @brief 画像データを表現するクラス
 	class Image
 	{
 	public:
