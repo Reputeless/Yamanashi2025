@@ -80,6 +80,29 @@ namespace mini
 			return !isEmpty();
 		}
 
+		/// @brief 画像データの先頭ポインタを返します。
+		/// @return 画像データの先頭ポインタ
+		[[nodiscard]]
+		Color* data() noexcept
+		{
+			return m_pixels.data();
+		}
+
+		/// @brief 画像データの先頭ポインタを返します。
+		/// @return 画像データの先頭ポインタ
+		[[nodiscard]]
+		const Color* data() const noexcept
+		{
+			return m_pixels.data();
+		}
+
+		/// @brief 画像を指定した色で塗りつぶします。
+		/// @param fillColor 塗りつぶしの色
+		void fill(const Color& fillColor) noexcept
+		{
+			std::fill(m_pixels.begin(), m_pixels.end(), fillColor);
+		}
+
 		/// @brief 指定した位置が画像の範囲内であるかを返します。
 		/// @param y 行番号
 		/// @param x 列番号
@@ -157,29 +180,6 @@ namespace mini
 		{
 			assert(inBounds(p.y, p.x));
 			return m_pixels[(p.y * m_width) + p.x];
-		}
-
-		/// @brief 画像データの先頭ポインタを返します。
-		/// @return 画像データの先頭ポインタ
-		[[nodiscard]]
-		Color* data() noexcept
-		{
-			return m_pixels.data();
-		}
-
-		/// @brief 画像データの先頭ポインタを返します。
-		/// @return 画像データの先頭ポインタ
-		[[nodiscard]]
-		const Color* data() const noexcept
-		{
-			return m_pixels.data();
-		}
-
-		/// @brief 画像を指定した色で塗りつぶします。
-		/// @param fillColor 塗りつぶしの色
-		void fill(const Color& fillColor) noexcept
-		{
-			std::fill(m_pixels.begin(), m_pixels.end(), fillColor);
 		}
 
 		/// @brief イテレータの型
