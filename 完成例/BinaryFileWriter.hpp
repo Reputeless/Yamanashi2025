@@ -19,6 +19,9 @@ namespace mini
 		/// @param path ファイルパス
 		[[nodiscard]]
 		explicit BinaryFileWriter(std::string_view path);
+		
+		/// @brief デストラクタ
+		~BinaryFileWriter();
 
 		/// @brief ファイルがオープンされているかを返します。
 		/// @return オープンされている場合 true, それ以外の場合は false

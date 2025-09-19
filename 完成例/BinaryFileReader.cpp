@@ -118,6 +118,8 @@ namespace mini
 		m_pImpl->open(path);
 	}
 
+	BinaryFileReader::~BinaryFileReader() = default;
+
 	bool BinaryFileReader::isOpen() const noexcept
 	{
 		return m_pImpl->isOpen();

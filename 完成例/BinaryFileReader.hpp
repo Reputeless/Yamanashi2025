@@ -21,6 +21,9 @@ namespace mini
 		[[nodiscard]]
 		explicit BinaryFileReader(std::string_view path);
 
+		/// @brief デストラクタ
+		~BinaryFileReader();
+
 		/// @brief ファイルがオープンされているかを返します。
 		/// @return オープンされている場合 true, それ以外の場合は false
 		[[nodiscard]]

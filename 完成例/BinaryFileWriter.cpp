@@ -82,6 +82,8 @@ namespace mini
 		m_pImpl->open(path);
 	}
 
+	BinaryFileWriter::~BinaryFileWriter() = default;
+
 	bool BinaryFileWriter::isOpen() const noexcept
 	{
 		return m_pImpl->isOpen();
