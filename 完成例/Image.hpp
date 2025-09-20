@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <vector>		// std::vector
-#include <cassert>		// assert
 #include <algorithm>	// std::fill
+#include <cassert>		// assert
 #include <span>			// std::span
 #include "Color.hpp"	// mini::Color
 #include "Point.hpp"	// mini::Point
